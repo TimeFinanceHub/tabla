@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Cargar tareas al inicio
     const fetchTodos = async () => {
-        const res = await fetch('/home/timeziej/syntax/sanctuary.com/p4ws/api/todo.php');
+        const res = await fetch('/home/timeziej/syntaxsanctuary.com/p4ws/api/todo.php');
         const data = await res.json();
         data.data.forEach(todo => renderTodo(todo));
     };
