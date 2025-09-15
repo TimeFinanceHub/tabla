@@ -46,7 +46,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 switch ($method) {
     case 'GET':
-        $todos = $db->query("SELECT * FROM todos ORDER BY id DESC");
+        $todos = $db->query("SELECT *, CAST(completed AS UNSIGNED) as completed FROM todos ORDER BY id DESC");
         echo json_encode(['success' => true, 'data' => $todos]);
         break;
 
