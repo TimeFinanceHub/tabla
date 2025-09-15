@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const li = document.createElement('li');
         li.classList.add('todo-item');
         li.dataset.id = todo.id;
-        if (todo.completed) {
+        
+        // Convertimos el valor a booleano para una verificación estricta
+        if (!!parseInt(todo.completed)) {
             li.classList.add('completed');
         }
 
