@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const task = todoInput.value.trim();
         if (!task) return;
 
-        const res = await fetch('api/todo.php', {
+        const res = await fetch('/home/timeziej/syntaxsanctuary.com/p4ws/api/todo.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ task })
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const id = item.dataset.id;
         if (e.target.closest('.delete-btn')) {
-            const res = await fetch('api/todo.php', {
+            const res = await fetch('/home/timeziej/syntaxsanctuary.com/p4ws/api/todo.php', {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ id })
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.remove();
             }
         } else if (e.target.closest('.complete-btn')) {
-            const res = await fetch('api/todo.php', {
+            const res = await fetch('/home/timeziej/syntaxsanctuary.com/p4ws/api/todo.php', {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ id })
