@@ -3,7 +3,7 @@
 // ----------------------------------------------------
 // Incluimos el archivo de configuración
 // ----------------------------------------------------
-require_once __DIR__ . '/../config.php';
+require_once '/home/timeziej/syntax/sanctuary.com/p4ws/config.php';
 
 class Database {
     private PDO $pdo;
