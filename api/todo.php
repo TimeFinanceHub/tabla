@@ -3,7 +3,7 @@
 // ----------------------------------------------------
 // Incluimos el archivo de configuración
 // ----------------------------------------------------
-require_once 'config.php';
+require_once '../config.php';
 
 class Database {
     private PDO $pdo;
